@@ -46,7 +46,7 @@ const ProductCard: FC<Product> = ({
             <img src={thumbnail} alt={title} className="object-cover" />
           </Link>
 
-          <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">
+          <span className="absolute top-0 left-0 m-2 rounded-full bg-purple px-2 text-center text-sm font-medium text-white">
             39% OFF
           </span>
         <div className="mt-4 px-5 pb-5">
