@@ -10,7 +10,9 @@ export default {
         lora: ["Lora", "sans-serif"],
       },
       colors: {
-      purple: '#743dc6',
+      purple: '#fb8500',
+      epink:"#ffb703",
+      eColor:"#00000"
     }
     }
     

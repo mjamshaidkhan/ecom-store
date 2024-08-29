@@ -1,5 +1,4 @@
 import { FC, useState } from "react";
-import { RxCross1 } from "react-icons/rx";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { emptyCart, setCartState } from "../redux/features/cartSlice";
 import CartRow from "./CartRow";
@@ -133,7 +132,7 @@ const CartItem: FC = () => {
             Complete your order by providing your payment details.
           </p>
           <div className="">
-            <label for="email" className="mt-4 mb-2 block text-sm font-medium">
+            <label htmlFor="email" className="mt-4 mb-2 block text-sm font-medium">
               Email
             </label>
             <div className="relative">
@@ -258,7 +257,7 @@ const CartItem: FC = () => {
                 </div>
               </div>
               <select
-                type="text"
+                
                 name="billing-state"
                 className="w-full rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
               >

@@ -24,7 +24,7 @@ const Banner: FC = () => (
   //   </div>
   // </div>
 
-  <div className="py-5 bg-neutral-100 lg:py-10 container mt-8 mx-auto px-4 md:flex font-lora drop-shadow-2xl">
+  <div className="py-5 bg-epink lg:py-10 container mt-8 mx-auto px-4 md:flex font-lora drop-shadow-2xl">
     <div className="grid lg:grid-cols-2 items-center justify-items-center gap-5">
       <div className="order-2 lg:order-1 flex flex-col justify-center items-center">
         <p className="text-4xl font-bold md:text-7xl text-orange-600">
@@ -35,7 +35,7 @@ const Banner: FC = () => (
         <button className="relative inline-block font-medium group py-1.5 px-2.5 ">
           <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1  bg-purple  group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
           <span className="absolute inset-0 w-full h-full bg-white border border-[rgba(31,_41,_55)] group-hover:bg-indigo-50"></span>
-          <span className="relative text-black ">
+          <span className="relative text-eColor ">
             <Link to="/product/4" data-test="banner-btn">
               Shop Now 
             </Link>

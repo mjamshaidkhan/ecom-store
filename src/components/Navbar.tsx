@@ -1,15 +1,15 @@
 import { FC } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { BsSearch } from "react-icons/bs";
+// import { BsSearch } from "react-icons/bs";
 import { useAppSelector, useAppDispatch } from "../redux/hooks";
-import { setCartState } from "../redux/features/cartSlice";
+// import { setCartState } from "../redux/features/cartSlice";
 import { updateModal } from "../redux/features/authSlice";
 import { Link } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
+// import useAuth from "../hooks/useAuth";
 import { FaUser } from "react-icons/fa";
 import CustomPopup from "./CustomPopup";
-import { updateDarkMode } from "../redux/features/homeSlice";
-import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+// import { updateDarkMode } from "../redux/features/homeSlice";
+// import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 const Navbar: FC = () => {
   const dispatch = useAppDispatch();
@@ -17,12 +17,12 @@ const Navbar: FC = () => {
     (state) => state.cartReducer.cartItems.length
   );
   const username = useAppSelector((state) => state.authReducer.username);
-  const isDarkMode = useAppSelector((state) => state.homeReducer.isDarkMode);
-  const { requireAuth } = useAuth();
+  // const isDarkMode = useAppSelector((state) => state.homeReducer.isDarkMode);
+  // const { requireAuth } = useAuth();
 
-  const showCart = () => {
-    requireAuth(() => dispatch(setCartState(true)));
-  };
+  // const showCart = () => {
+  //   requireAuth(() => dispatch(setCartState(true)));
+  // };
 
   return (
     <div className="py-4 bg-white dark:bg-slate-800 top-0 sticky z-10 shadow-lg font-karla">
@@ -46,7 +46,8 @@ const Navbar: FC = () => {
             </div>
           </div> */}
           <div className="flex justify-center gap-2  rounded-xl p-4 font-semibold">
-            <a className="p-1 px-4 group relative" href="#">
+            <div className="flex rounded-sm mx-auto bg-gradient-to-tr from-purple via-orange-400 to-rose-400 p-1 shadow-lg">
+              <button className="flex-1 font-bold text-xl bg-white px-6 py-1 rounded-sm">
               <Link
                 to="/products"
                 className="text-xl font-bold"
@@ -54,22 +55,20 @@ const Navbar: FC = () => {
               >
                 Products
               </Link>
-
-              <div className="absolute bottom-0 left-0 bg-purple h-0 w-full transition-all duration-500 group-hover:h-[5px]"></div>
-            </a>
-            <a className="p-1 px-4 group relative" href="#">
-              <span className="text-gray-800">
-                {" "}
-                <Link
+              </button>
+            </div>
+            <div className="flex rounded-sm mx-auto bg-gradient-to-tr from-purple via-orange-400 to-rose-400 p-1 shadow-lg">
+              <button className="flex-1 font-bold text-xl bg-white px-6 py-1 rounded-sm">
+              <Link
                   to="/categories"
                   className="text-xl font-bold"
                   data-test="main-categories"
                 >
                   Categories
                 </Link>
-              </span>
-              <div className="absolute bottom-0 left-0 bg-purple h-0 w-full transition-shadow duration-500 group-hover:h-[5px]"></div>
-            </a>
+              </button>
+            </div>
+
           </div>
 
           <div className="flex gap-4 md:gap-8 items-center dark:text-white">

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Footer: FC = () => (
   <div className="py-4 bg-white dark:bg-slate-800 top-0 sticky z-10 shadow-lg font-karla   ">
